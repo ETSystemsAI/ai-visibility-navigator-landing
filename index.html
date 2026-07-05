@@ -421,44 +421,54 @@ footer a { color: var(--blue); text-decoration: none; }
 
 /* ─── Language display logic (FIXED) ────────────────────────── */
 /* По умолчанию (английская версия): показываем .en, скрываем .sr */
-.sr { display: none; }
+.sr { display: none !important; }
 .en { display: inline; }
 
 /* В сербской версии: скрываем .en, показываем .sr */
-body.lang-sr .en { display: none; }
-body.lang-sr .sr { display: inline; }
+body.lang-sr .en { display: none !important; }
+body.lang-sr .sr { display: inline !important; }
 
-/* Для блочных элементов (заголовки, параграфы, списки) */
-h3.en, h3.sr,
-p.en, p.sr,
-ul.en, ul.sr,
-li.en, li.sr,
-div.en, div.sr,
-span.en, span.sr {
-  display: inline; /* по умолчанию для span-подобных */
+/* Для блочных элементов */
+body.lang-sr .sr.pricing-desc,
+body.lang-sr .sr.pricing-features,
+body.lang-sr .sr.pricing-card h3,
+body.lang-sr .sr.pricing-badge,
+body.lang-sr .sr.pricing-price span,
+body.lang-sr .sr.pricing-btn span,
+body.lang-sr .sr.cta-section h2,
+body.lang-sr .sr.cta-section p,
+body.lang-sr .sr.cta-section a span,
+body.lang-sr .sr.footer p,
+body.lang-sr .sr.footer span,
+body.lang-sr .sr.hero-badge,
+body.lang-sr .sr.hero h1,
+body.lang-sr .sr.hero p,
+body.lang-sr .sr.hero-actions a span,
+body.lang-sr .sr.section-eyebrow,
+body.lang-sr .sr.section-title,
+body.lang-sr .sr.section-sub,
+body.lang-sr .sr.step h3,
+body.lang-sr .sr.step p,
+body.lang-sr .sr.demo-label,
+body.lang-sr .sr.demo-score-card .lbl,
+body.lang-sr .sr.metric-card h3,
+body.lang-sr .sr.metric-card p {
+  display: block !important;
 }
 
-h3.en, h3.sr { display: inline-block; }
-p.en, p.sr { display: block; }
-ul.en, ul.sr { display: block; }
-li.en, li.sr { display: list-item; }
+/* Для инлайн-элементов внутри списков */
+body.lang-sr .pricing-features li .sr {
+  display: inline !important;
+}
 
-body.lang-sr h3.en,
-body.lang-sr p.en,
-body.lang-sr ul.en,
-body.lang-sr li.en,
-body.lang-sr div.en,
-body.lang-sr span.en { display: none !important; }
+/* Явно показываем сербские версии в списках */
+body.lang-sr .pricing-features li .en {
+  display: none !important;
+}
 
-body.lang-sr h3.sr,
-body.lang-sr p.sr,
-body.lang-sr ul.sr,
-body.lang-sr li.sr,
-body.lang-sr div.sr,
-body.lang-sr span.sr { display: block !important; }
-
-/* Для инлайн-элементов */
-body.lang-sr span.sr { display: inline !important; }
+body.lang-sr .pricing-features li .sr {
+  display: inline !important;
+}
 </style>
 </head>
 <body>
@@ -765,6 +775,3 @@ window.addEventListener('load', () => {
     });
   }, 600);
 });
-</script>
-</body>
-</html>
