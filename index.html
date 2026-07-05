@@ -419,54 +419,42 @@ footer a { color: var(--blue); text-decoration: none; }
   .demo-score-card .num { font-size: 1.5rem; }
 }
 
-/* ─── Language display logic (FIXED) ────────────────────────── */
-/* По умолчанию (английская версия): показываем .en, скрываем .sr */
-.sr { display: none !important; }
-.en { display: inline; }
+/* ─── Language display logic ─────────────────────────────────── */
 
-/* В сербской версии: скрываем .en, показываем .sr */
-body.lang-sr .en { display: none !important; }
-body.lang-sr .sr { display: inline !important; }
-
-/* Для блочных элементов */
-body.lang-sr .sr.pricing-desc,
-body.lang-sr .sr.pricing-features,
-body.lang-sr .sr.pricing-card h3,
-body.lang-sr .sr.pricing-badge,
-body.lang-sr .sr.pricing-price span,
-body.lang-sr .sr.pricing-btn span,
-body.lang-sr .sr.cta-section h2,
-body.lang-sr .sr.cta-section p,
-body.lang-sr .sr.cta-section a span,
-body.lang-sr .sr.footer p,
-body.lang-sr .sr.footer span,
-body.lang-sr .sr.hero-badge,
-body.lang-sr .sr.hero h1,
-body.lang-sr .sr.hero p,
-body.lang-sr .sr.hero-actions a span,
-body.lang-sr .sr.section-eyebrow,
-body.lang-sr .sr.section-title,
-body.lang-sr .sr.section-sub,
-body.lang-sr .sr.step h3,
-body.lang-sr .sr.step p,
-body.lang-sr .sr.demo-label,
-body.lang-sr .sr.demo-score-card .lbl,
-body.lang-sr .sr.metric-card h3,
-body.lang-sr .sr.metric-card p {
-  display: block !important;
+/* English by default */
+.en {
+  display: block;
 }
 
-/* Для инлайн-элементов внутри списков */
-body.lang-sr .pricing-features li .sr {
-  display: inline !important;
+.sr {
+  display: none;
 }
 
-/* Явно показываем сербские версии в списках */
-body.lang-sr .pricing-features li .en {
+/* Inline elements */
+span.en,
+a .en,
+button .en {
+  display: inline;
+}
+
+span.sr,
+a .sr,
+button .sr {
+  display: none;
+}
+
+/* Serbian mode */
+body.lang-sr .en {
   display: none !important;
 }
 
-body.lang-sr .pricing-features li .sr {
+body.lang-sr .sr {
+  display: block !important;
+}
+
+body.lang-sr span.sr,
+body.lang-sr a .sr,
+body.lang-sr button .sr {
   display: inline !important;
 }
 </style>
@@ -643,7 +631,6 @@ body.lang-sr .pricing-features li .sr {
     </div>
     <div class="pricing-grid">
 
-      <!-- Basic Audit Card -->
       <div class="pricing-card">
         <h3 class="en">Basic Audit</h3>
         <h3 class="sr">Osnovni audit</h3>
@@ -651,10 +638,14 @@ body.lang-sr .pricing-features li .sr {
         <p class="pricing-desc en">A full AI visibility snapshot for your business. Delivered in 48 hours.</p>
         <p class="pricing-desc sr">Puna AI vidljivost vašeg biznisa. Isporučeno za 48 sati.</p>
         <ul class="pricing-features">
-          <li><span class="en">10 AI query simulations</span><span class="sr">10 simulacija AI upita</span></li>
-          <li><span class="en">Visibility + Accuracy + Gap scores</span><span class="sr">Vidljivost + Tačnost + Gap skor</span></li>
-          <li><span class="en">HTML report with recommendations</span><span class="sr">HTML izveštaj sa preporukama</span></li>
-          <li><span class="en">1 follow-up consultation call</span><span class="sr">1 konsultacioni poziv</span></li>
+          <li class="en">10 AI query simulations</li>
+          <li class="sr">10 simulacija AI upita</li>
+          <li class="en">Visibility + Accuracy + Gap scores</li>
+          <li class="sr">Vidljivost + Tačnost + Gap skor</li>
+          <li class="en">HTML report with recommendations</li>
+          <li class="sr">HTML izveštaj sa preporukama</li>
+          <li class="en">1 follow-up consultation call</li>
+          <li class="sr">1 konsultacioni poziv</li>
         </ul>
         <a href="mailto:e.kate.taratuta@gmail.com?subject=Basic Audit Request" class="pricing-btn secondary">
           <span class="en">Request audit</span>
@@ -662,7 +653,6 @@ body.lang-sr .pricing-features li .sr {
         </a>
       </div>
 
-      <!-- Premium Monitor Card -->
       <div class="pricing-card featured">
         <div class="pricing-badge">
           <span class="en">RECOMMENDED</span>
@@ -674,11 +664,16 @@ body.lang-sr .pricing-features li .sr {
         <p class="pricing-desc en">Ongoing monitoring as AI systems and your content evolve. Cancel anytime.</p>
         <p class="pricing-desc sr">Kontinuirani monitoring kako AI sistemi i vaš sadržaj evoluiraju. Otkažite kada god hoćete.</p>
         <ul class="pricing-features">
-          <li><span class="en">Everything in Basic</span><span class="sr">Sve iz Osnovnog paketa</span></li>
-          <li><span class="en">Monthly re-audit + trend tracking</span><span class="sr">Mesečni re-audit + praćenje trendova</span></li>
-          <li><span class="en">Competitor visibility comparison</span><span class="sr">Poređenje vidljivosti sa konkurencijom</span></li>
-          <li><span class="en">Score alerts when visibility drops</span><span class="sr">Upozorenja kada vidljivost padne</span></li>
-          <li><span class="en">Priority email support</span><span class="sr">Prioritetna email podrška</span></li>
+          <li class="en">Everything in Basic</li>
+          <li class="sr">Sve iz Osnovnog paketa</li>
+          <li class="en">Monthly re-audit + trend tracking</li>
+          <li class="sr">Mesečni re-audit + praćenje trendova</li>
+          <li class="en">Competitor visibility comparison</li>
+          <li class="sr">Poređenje vidljivosti sa konkurencijom</li>
+          <li class="en">Score alerts when visibility drops</li>
+          <li class="sr">Upozorenja kada vidljivost padne</li>
+          <li class="en">Priority email support</li>
+          <li class="sr">Prioritetna email podrška</li>
         </ul>
         <a href="mailto:e.kate.taratuta@gmail.com?subject=Premium Monitor Request" class="pricing-btn primary">
           <span class="en">Get started</span>
@@ -709,7 +704,7 @@ body.lang-sr .pricing-features li .sr {
 <!-- Footer -->
 <footer>
   <p>
-    <strong>ETSystemsAI</strong> ·
+    <strong>AI Visibility Navigator by ETSystemsAI</strong> ·
     <a href="mailto:e.kate.taratuta@gmail.com">e.kate.taratuta@gmail.com</a> ·
     <span class="en">Sombor, Serbia</span>
     <span class="sr">Sombor, Srbija</span>
@@ -775,3 +770,6 @@ window.addEventListener('load', () => {
     });
   }, 600);
 });
+</script>
+</body>
+</html>
