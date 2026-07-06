@@ -41,7 +41,7 @@ h1,h2,h3,h4 { font-family: 'Space Grotesk', sans-serif; line-height: 1.2; }
 
 .container { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; }
 
-/* ── BUNDLE BANNER (TALLER) ────────────────────────── */
+/* ── BUNDLE BANNER ────────────────────────── */
 .bundle-banner {
   background: linear-gradient(135deg, #4F46E5 0%, #3730A3 100%);
   color: white;
@@ -147,413 +147,108 @@ nav {
 .nav-cta:hover { opacity: 0.85; }
 
 /* ─── Hero ───────────────────────────────────────────────────── */
-.hero {
-  padding: 5rem 0 4rem;
-  text-align: center;
-}
-.hero-badge {
-  display: inline-block;
-  background: var(--blue-dim);
-  color: var(--blue);
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 0.3rem 0.9rem;
-  border-radius: 99px;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.04em;
-}
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3.25rem);
-  font-weight: 700;
-  max-width: 800px;
-  margin: 0 auto 1.25rem;
-}
-.hero h1 em {
-  font-style: normal;
-  color: var(--blue);
-}
-.hero p {
-  font-size: 1.15rem;
-  color: var(--ink-soft);
-  max-width: 580px;
-  margin: 0 auto 2.5rem;
-}
-.hero-actions {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.btn-primary {
-  background: var(--blue);
-  color: #fff;
-  padding: 0.85rem 2rem;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: opacity 0.2s, transform 0.2s;
-  display: inline-block;
-}
+.hero { padding: 5rem 0 4rem; text-align: center; }
+.hero-badge { display: inline-block; background: var(--blue-dim); color: var(--blue); font-size: 0.8rem; font-weight: 600; padding: 0.3rem 0.9rem; border-radius: 99px; margin-bottom: 1.5rem; letter-spacing: 0.04em; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; max-width: 800px; margin: 0 auto 1.25rem; }
+.hero h1 em { font-style: normal; color: var(--blue); }
+.hero p { font-size: 1.15rem; color: var(--ink-soft); max-width: 580px; margin: 0 auto 2.5rem; }
+.hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.btn-primary { background: var(--blue); color: #fff; padding: 0.85rem 2rem; border-radius: 10px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: opacity 0.2s, transform 0.2s; display: inline-block; }
 .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
-.btn-secondary {
-  background: var(--surface);
-  color: var(--ink);
-  padding: 0.85rem 2rem;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  border: 1px solid var(--border);
-  transition: border-color 0.2s;
-  display: inline-block;
-}
+.btn-secondary { background: var(--surface); color: var(--ink); padding: 0.85rem 2rem; border-radius: 10px; font-weight: 600; font-size: 1rem; text-decoration: none; border: 1px solid var(--border); transition: border-color 0.2s; display: inline-block; }
 .btn-secondary:hover { border-color: var(--blue); color: var(--blue); }
 
-/* ─── Animated Demo Panel ────────────────────────────────────── */
-.demo-panel {
-  max-width: 680px;
-  margin: 3.5rem auto 0;
-  background: var(--surface);
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(15,23,42,0.08);
-}
-.demo-top {
-  background: var(--ink);
-  padding: 0.75rem 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.demo-dot {
-  width: 10px; height: 10px;
-  border-radius: 50%;
-}
-.demo-url {
-  background: rgba(255,255,255,0.08);
-  color: rgba(255,255,255,0.5);
-  font-size: 0.78rem;
-  padding: 0.25rem 0.75rem;
-  border-radius: 5px;
-  flex: 1;
-  font-family: monospace;
-}
+/* ─── Demo Panel ─────────────────────────────────────────────── */
+.demo-panel { max-width: 680px; margin: 3.5rem auto 0; background: var(--surface); border-radius: 16px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 20px 60px rgba(15,23,42,0.08); }
+.demo-top { background: var(--ink); padding: 0.75rem 1rem; display: flex; align-items: center; gap: 0.5rem; }
+.demo-dot { width: 10px; height: 10px; border-radius: 50%; }
+.demo-url { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.5); font-size: 0.78rem; padding: 0.25rem 0.75rem; border-radius: 5px; flex: 1; font-family: monospace; }
 .demo-body { padding: 1.5rem; }
-.demo-label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--ink-soft);
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  margin-bottom: 0.75rem;
-}
-.demo-scores {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-  margin-bottom: 1.25rem;
-}
-.demo-score-card {
-  border-radius: 10px;
-  padding: 1rem;
-  text-align: center;
-}
-.demo-score-card.blue  { background: var(--blue-dim); }
+.demo-label { font-size: 0.75rem; font-weight: 600; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 0.75rem; }
+.demo-scores { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-bottom: 1.25rem; }
+.demo-score-card { border-radius: 10px; padding: 1rem; text-align: center; }
+.demo-score-card.blue { background: var(--blue-dim); }
 .demo-score-card.green { background: var(--green-dim); }
 .demo-score-card.amber { background: var(--amber-dim); }
-.demo-score-card .num {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  display: block;
-  line-height: 1;
-  margin-bottom: 0.25rem;
-}
-.demo-score-card.blue  .num { color: var(--blue); }
+.demo-score-card .num { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; display: block; line-height: 1; margin-bottom: 0.25rem; }
+.demo-score-card.blue .num { color: var(--blue); }
 .demo-score-card.green .num { color: var(--green); }
 .demo-score-card.amber .num { color: var(--amber); }
-.demo-score-card .lbl {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--ink-soft);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-.demo-bar-row {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.6rem;
-  font-size: 0.82rem;
-}
-.demo-bar-row .q {
-  flex: 1;
-  color: var(--ink-soft);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+.demo-score-card .lbl { font-size: 0.72rem; font-weight: 600; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.05em; }
+.demo-bar-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.6rem; font-size: 0.82rem; }
+.demo-bar-row .q { flex: 1; color: var(--ink-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .demo-bar-wrap { width: 120px; background: var(--border); border-radius: 99px; height: 6px; flex-shrink: 0; }
 .demo-bar { height: 6px; border-radius: 99px; transition: width 1.2s ease; }
 .demo-bar.high { background: var(--green); }
-.demo-bar.mid  { background: var(--amber); }
-.demo-bar.low  { background: var(--red); }
+.demo-bar.mid { background: var(--amber); }
+.demo-bar.low { background: var(--red); }
 .demo-score-lbl { width: 32px; text-align: right; font-weight: 600; font-size: 0.8rem; color: var(--ink); }
 
-/* ─── Section Base ───────────────────────────────────────────── */
+/* ─── Sections ───────────────────────────────────────────────── */
 section { padding: 4.5rem 0; }
-.section-eyebrow {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--blue);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.75rem;
-}
-.section-title {
-  font-size: clamp(1.5rem, 3vw, 2.1rem);
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-.section-sub {
-  color: var(--ink-soft);
-  font-size: 1.05rem;
-  max-width: 560px;
-}
+.section-eyebrow { font-size: 0.78rem; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
+.section-title { font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 700; margin-bottom: 1rem; }
+.section-sub { color: var(--ink-soft); font-size: 1.05rem; max-width: 560px; }
 
-/* ─── Metrics Section ────────────────────────────────────────── */
+/* ─── Metrics ────────────────────────────────────────────────── */
 .metrics { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding-top: 1rem;
-}
-.metric-card {
-  padding: 1.75rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-}
+.metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; padding-top: 1rem; }
+.metric-card { padding: 1.75rem; border-radius: var(--radius); border: 1px solid var(--border); }
 .metric-icon { font-size: 2rem; margin-bottom: 1rem; }
 .metric-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
 .metric-card p { font-size: 0.9rem; color: var(--ink-soft); }
 
-/* ─── How It Works ───────────────────────────────────────────── */
-.steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 2.5rem;
-}
-.step {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.75rem;
-  position: relative;
-}
-.step-num {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--blue-dim);
-  line-height: 1;
-  margin-bottom: 0.75rem;
-}
+/* ─── Steps ──────────────────────────────────────────────────── */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+.step { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.75rem; }
+.step-num { font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; font-weight: 700; color: var(--blue-dim); line-height: 1; margin-bottom: 0.75rem; }
 .step h3 { font-size: 1rem; margin-bottom: 0.5rem; }
 .step p { font-size: 0.88rem; color: var(--ink-soft); }
 
 /* ─── Pricing ────────────────────────────────────────────────── */
-.pricing-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  max-width: 780px;
-  margin: 2.5rem auto 0;
-}
-.pricing-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 2rem;
-}
-.pricing-card.featured {
-  border-color: var(--blue);
-  box-shadow: 0 0 0 1px var(--blue), 0 8px 30px rgba(37,99,235,0.12);
-}
-.pricing-badge {
-  display: inline-block;
-  background: var(--blue);
-  color: #fff;
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 0.2rem 0.6rem;
-  border-radius: 5px;
-  margin-bottom: 1rem;
-  letter-spacing: 0.04em;
-}
-.pricing-card h3 {
-  font-size: 1.15rem;
-  margin-bottom: 0.25rem;
-}
-.pricing-price {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: var(--blue);
-  margin: 0.75rem 0 0.25rem;
-}
-.pricing-price span {
-  font-size: 1rem;
-  color: var(--ink-soft);
-  font-weight: 400;
-}
+.pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 780px; margin: 2.5rem auto 0; }
+.pricing-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; }
+.pricing-card.featured { border-color: var(--blue); box-shadow: 0 0 0 1px var(--blue), 0 8px 30px rgba(37,99,235,0.12); }
+.pricing-badge { display: inline-block; background: var(--blue); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 5px; margin-bottom: 1rem; letter-spacing: 0.04em; }
+.pricing-card h3 { font-size: 1.15rem; margin-bottom: 0.25rem; }
+.pricing-price { font-family: 'Space Grotesk', sans-serif; font-size: 2.25rem; font-weight: 700; color: var(--blue); margin: 0.75rem 0 0.25rem; }
+.pricing-price span { font-size: 1rem; color: var(--ink-soft); font-weight: 400; }
 .pricing-desc { font-size: 0.88rem; color: var(--ink-soft); margin-bottom: 1.5rem; }
 .pricing-features { list-style: none; margin-bottom: 1.75rem; }
-.pricing-features li {
-  font-size: 0.9rem;
-  padding: 0.4rem 0;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  gap: 0.6rem;
-  align-items: flex-start;
-}
+.pricing-features li { font-size: 0.9rem; padding: 0.4rem 0; border-bottom: 1px solid var(--border); display: flex; gap: 0.6rem; align-items: flex-start; }
 .pricing-features li:last-child { border-bottom: none; }
 .pricing-features li::before { content: "✓"; color: var(--green); font-weight: 700; flex-shrink: 0; }
-.pricing-btn {
-  display: block;
-  text-align: center;
-  padding: 0.8rem;
-  border-radius: 9px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
+.pricing-btn { display: block; text-align: center; padding: 0.8rem; border-radius: 9px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: opacity 0.2s; }
 .pricing-btn.primary { background: var(--blue); color: #fff; }
 .pricing-btn.secondary { background: var(--bg); color: var(--blue); border: 1px solid var(--blue); }
 .pricing-btn:hover { opacity: 0.85; }
 
-/* ── BUNDLE CROSS-SELL SECTION ──────────────────────── */
+/* ── Bundle cross-sell ────────────────────────── */
 .bundle-section {
   background: linear-gradient(135deg, #EEF2FF 0%, #E0F2FE 100%);
-  border: 2px solid #DBEAFE;
-  border-radius: 20px;
-  padding: 40px 32px;
-  margin-top: 48px;
-  text-align: center;
+  border: 2px solid #DBEAFE; border-radius: 20px;
+  padding: 40px 32px; margin-top: 48px; text-align: center;
 }
-.bundle-section .bundle-kicker {
-  display: inline-block;
-  background: var(--amber);
-  color: #111827;
-  font-size: 12px;
-  font-weight: 800;
-  padding: 4px 14px;
-  border-radius: 99px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-.bundle-section h3 {
-  font-size: 24px;
-  margin-bottom: 8px;
-  font-family: 'Space Grotesk', sans-serif;
-}
-.bundle-section p {
-  color: var(--ink-soft);
-  font-size: 15px;
-  max-width: 560px;
-  margin: 0 auto 24px;
-}
-.bundle-section .bundle-products {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 24px;
-  align-items: center;
-}
-.bundle-section .bundle-product-chip {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 12px 20px;
-  font-weight: 700;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.bundle-section .bundle-plus {
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--indigo);
-  display: flex;
-  align-items: center;
-}
-.bundle-price-big {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 42px;
-  font-weight: 700;
-  color: var(--indigo);
-  margin-bottom: 4px;
-}
-.bundle-price-big .bundle-old {
-  font-size: 20px;
-  color: var(--ink-soft);
-  text-decoration: line-through;
-  font-weight: 400;
-  margin-left: 8px;
-}
-.bundle-save {
-  display: inline-block;
-  background: var(--green);
-  color: white;
-  font-size: 13px;
-  font-weight: 700;
-  padding: 4px 12px;
-  border-radius: 99px;
-  margin-bottom: 20px;
-}
-.btn-bundle {
-  background: var(--indigo);
-  color: white;
-  padding: 16px 36px;
-  border-radius: 30px;
-  font-weight: 700;
-  font-size: 16px;
-  text-decoration: none;
-  display: inline-block;
-  transition: background 0.15s, transform 0.15s;
-}
-.btn-bundle:hover {
-  background: var(--indigo-dark);
-  transform: translateY(-2px);
-}
+.bundle-section .bundle-kicker { display: inline-block; background: var(--amber); color: #111827; font-size: 12px; font-weight: 800; padding: 4px 14px; border-radius: 99px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+.bundle-section h3 { font-size: 24px; margin-bottom: 8px; font-family: 'Space Grotesk', sans-serif; }
+.bundle-section p { color: var(--ink-soft); font-size: 15px; max-width: 560px; margin: 0 auto 24px; }
+.bundle-section .bundle-products { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; align-items: center; }
+.bundle-section .bundle-product-chip { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 12px 20px; font-weight: 700; font-size: 14px; display: flex; align-items: center; gap: 8px; }
+.bundle-section .bundle-plus { font-size: 20px; font-weight: 800; color: var(--indigo); display: flex; align-items: center; }
+.bundle-price-big { font-family: 'Space Grotesk', sans-serif; font-size: 42px; font-weight: 700; color: var(--indigo); margin-bottom: 4px; }
+.bundle-price-big .bundle-old { font-size: 20px; color: var(--ink-soft); text-decoration: line-through; font-weight: 400; margin-left: 8px; }
+.bundle-save { display: inline-block; background: var(--green); color: white; font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 99px; margin-bottom: 20px; }
+.btn-bundle { background: var(--indigo); color: white; padding: 16px 36px; border-radius: 30px; font-weight: 700; font-size: 16px; text-decoration: none; display: inline-block; transition: background 0.15s, transform 0.15s; }
+.btn-bundle:hover { background: var(--indigo-dark); transform: translateY(-2px); }
 
 /* ─── CTA ────────────────────────────────────────────────────── */
-.cta-section {
-  background: var(--ink);
-  color: #fff;
-  text-align: center;
-  padding: 4rem 1.5rem;
-}
+.cta-section { background: var(--ink); color: #fff; text-align: center; padding: 4rem 1.5rem; }
 .cta-section h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1rem; }
 .cta-section p { color: rgba(255,255,255,0.65); margin-bottom: 2rem; font-size: 1.05rem; }
 .cta-section .btn-primary { background: var(--blue); }
 
 /* ─── Footer ─────────────────────────────────────────────────── */
-footer {
-  background: var(--surface);
-  border-top: 1px solid var(--border);
-  padding: 2rem 1.5rem;
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--ink-soft);
-}
+footer { background: var(--surface); border-top: 1px solid var(--border); padding: 2rem 1.5rem; text-align: center; font-size: 0.85rem; color: var(--ink-soft); }
 footer a { color: var(--blue); text-decoration: none; }
 
 /* ─── Responsive ─────────────────────────────────────────────── */
@@ -564,7 +259,7 @@ footer a { color: var(--blue); text-decoration: none; }
   .bundle-banner { font-size: 14px; padding: 16px 20px; gap: 10px; }
 }
 
-/* ─── Language display logic ─────────────────────────────────── */
+/* ─── Language display ───────────────────────────────────────── */
 .sr { display: none; }
 body.lang-sr .en { display: none; }
 body.lang-sr .sr { display: revert; }
@@ -572,11 +267,10 @@ body.lang-sr .sr { display: revert; }
 </head>
 <body>
 
-<!-- ── BUNDLE BANNER (TALL) ──────────────────────────────────── -->
+<!-- ── BUNDLE BANNER ─────────────────────────── -->
 <div class="bundle-banner">
   <span class="bundle-badge">🔥 Bundle Deal</span>
-  <span>Get <strong>AI Visibility Navigator + AI FAQ Assistant</strong> —</span>
-  <span class="bundle-price">$199 lifetime</span>
+  <span>Both tools — <strong>$299 setup + from $69/mo</strong></span>
   <a href="mailto:e.kate.taratuta@gmail.com?subject=Bundle%20Deal%20%E2%80%94%20AI%20Growth%20Suite">Grab the bundle →</a>
 </div>
 
@@ -591,8 +285,7 @@ body.lang-sr .sr { display: revert; }
   <div class="nav-inner">
     <a class="logo" href="#"><span>AI</span> Visibility Navigator</a>
     <a class="nav-cta" href="mailto:e.kate.taratuta@gmail.com">
-      <span class="en">Request Audit</span>
-      <span class="sr">Zatraži audit</span>
+      <span class="en">Request Audit</span><span class="sr">Zatraži audit</span>
     </a>
   </div>
 </nav>
@@ -600,64 +293,21 @@ body.lang-sr .sr { display: revert; }
 <!-- Hero -->
 <section class="hero">
   <div class="container">
-    <div class="hero-badge">
-      <span class="en">AI Search Optimization</span>
-      <span class="sr">AI optimizacija pretrage</span>
-    </div>
-    <h1>
-      <span class="en">How visible is your business<br>to <em>AI systems</em>?</span>
-      <span class="sr">Koliko je vaš biznis vidljiv<br>za <em>AI sisteme</em>?</span>
-    </h1>
-    <p>
-      <span class="en">When someone asks ChatGPT or Claude about your industry, does your business come up? We measure it — and tell you exactly what to fix.</span>
-      <span class="sr">Kada neko pita ChatGPT ili Claude o vašoj industriji, da li vaš biznis biva pomenut? Mi to merimo — i kažemo vam tačno šta da popravite.</span>
-    </p>
+    <div class="hero-badge"><span class="en">AI Search Optimization</span><span class="sr">AI optimizacija pretrage</span></div>
+    <h1><span class="en">How visible is your business<br>to <em>AI systems</em>?</span><span class="sr">Koliko je vaš biznis vidljiv<br>za <em>AI sisteme</em>?</span></h1>
+    <p><span class="en">When someone asks ChatGPT or Claude about your industry, does your business come up? We measure it — and tell you exactly what to fix.</span><span class="sr">Kada neko pita ChatGPT ili Claude o vašoj industriji, da li vaš biznis biva pomenut? Mi to merimo — i kažemo vam tačno šta da popravite.</span></p>
     <div class="hero-actions">
-      <a href="mailto:e.kate.taratuta@gmail.com" class="btn-primary">
-        <span class="en">Get your free sample report</span>
-        <span class="sr">Dobijte besplatni uzorak izveštaja</span>
-      </a>
-      <a href="#how" class="btn-secondary">
-        <span class="en">See how it works</span>
-        <span class="sr">Pogledajte kako funkcioniše</span>
-      </a>
+      <a href="mailto:e.kate.taratuta@gmail.com" class="btn-primary"><span class="en">Get your free sample report</span><span class="sr">Dobijte besplatni uzorak izveštaja</span></a>
+      <a href="#how" class="btn-secondary"><span class="en">See how it works</span><span class="sr">Pogledajte kako funkcioniše</span></a>
     </div>
-
-    <!-- Animated demo panel -->
     <div class="demo-panel">
-      <div class="demo-top">
-        <div class="demo-dot" style="background:#ef4444"></div>
-        <div class="demo-dot" style="background:#f59e0b"></div>
-        <div class="demo-dot" style="background:#10b981"></div>
-        <div class="demo-url">AI Visibility Navigator · running audit...</div>
-      </div>
+      <div class="demo-top"><div class="demo-dot" style="background:#ef4444"></div><div class="demo-dot" style="background:#f59e0b"></div><div class="demo-dot" style="background:#10b981"></div><div class="demo-url">AI Visibility Navigator · running audit...</div></div>
       <div class="demo-body">
-        <div class="demo-label">
-          <span class="en">Audit results · 10 questions analysed</span>
-          <span class="sr">Rezultati audita · 10 analiziranih pitanja</span>
-        </div>
+        <div class="demo-label"><span class="en">Audit results · 10 questions analysed</span><span class="sr">Rezultati audita · 10 analiziranih pitanja</span></div>
         <div class="demo-scores">
-          <div class="demo-score-card blue">
-            <span class="num" id="score-vis">0</span>
-            <span class="lbl">
-              <span class="en">Visibility</span>
-              <span class="sr">Vidljivost</span>
-            </span>
-          </div>
-          <div class="demo-score-card green">
-            <span class="num" id="score-acc">0</span>
-            <span class="lbl">
-              <span class="en">Accuracy</span>
-              <span class="sr">Tačnost</span>
-            </span>
-          </div>
-          <div class="demo-score-card amber">
-            <span class="num" id="score-gap">0</span>
-            <span class="lbl">
-              <span class="en">Gaps found</span>
-              <span class="sr">Pronađeni gapovi</span>
-            </span>
-          </div>
+          <div class="demo-score-card blue"><span class="num" id="score-vis">0</span><span class="lbl"><span class="en">Visibility</span><span class="sr">Vidljivost</span></span></div>
+          <div class="demo-score-card green"><span class="num" id="score-acc">0</span><span class="lbl"><span class="en">Accuracy</span><span class="sr">Tačnost</span></span></div>
+          <div class="demo-score-card amber"><span class="num" id="score-gap">0</span><span class="lbl"><span class="en">Gaps found</span><span class="sr">Pronađeni gapovi</span></span></div>
         </div>
         <div id="demo-bars"></div>
       </div>
@@ -669,27 +319,9 @@ body.lang-sr .sr { display: revert; }
 <section class="metrics">
   <div class="container">
     <div class="metrics-grid">
-      <div class="metric-card">
-        <div class="metric-icon">👁</div>
-        <h3 class="en">AI Visibility Score</h3>
-        <h3 class="sr">Skor AI vidljivosti</h3>
-        <p class="en">Does your business appear when potential customers ask AI about your category? We test 10+ realistic queries to find out.</p>
-        <p class="sr">Da li se vaš biznis pojavljuje kada potencijalni klijenti pitaju AI o vašoj kategoriji? Testiramo 10+ realnih upita.</p>
-      </div>
-      <div class="metric-card">
-        <div class="metric-icon">✅</div>
-        <h3 class="en">Answer Accuracy</h3>
-        <h3 class="sr">Tačnost odgovora</h3>
-        <p class="en">When AI uses your content to answer questions, does it get the facts right? We measure hallucinations and information gaps.</p>
-        <p class="sr">Kada AI koristi vaš sadržaj za odgovore, da li su činjenice tačne? Merimo halucinacije i nedostatak informacija.</p>
-      </div>
-      <div class="metric-card">
-        <div class="metric-icon">🔍</div>
-        <h3 class="en">Content Gap Detection</h3>
-        <h3 class="sr">Detekcija gapova u sadržaju</h3>
-        <p class="en">What are customers asking AI that your website doesn't answer? We identify missing topics and give you a content action plan.</p>
-        <p class="sr">Šta kupci pitaju AI što vaš sajt ne pokriva? Identifikujemo teme koje nedostaju i dajemo vam akcioni plan.</p>
-      </div>
+      <div class="metric-card"><div class="metric-icon">👁</div><h3 class="en">AI Visibility Score</h3><h3 class="sr">Skor AI vidljivosti</h3><p class="en">Does your business appear when potential customers ask AI about your category? We test 10+ realistic queries to find out.</p><p class="sr">Da li se vaš biznis pojavljuje kada potencijalni klijenti pitaju AI o vašoj kategoriji? Testiramo 10+ realnih upita.</p></div>
+      <div class="metric-card"><div class="metric-icon">✅</div><h3 class="en">Answer Accuracy</h3><h3 class="sr">Tačnost odgovora</h3><p class="en">When AI uses your content to answer questions, does it get the facts right? We measure hallucinations and information gaps.</p><p class="sr">Kada AI koristi vaš sadržaj za odgovore, da li su činjenice tačne? Merimo halucinacije i nedostatak informacija.</p></div>
+      <div class="metric-card"><div class="metric-icon">🔍</div><h3 class="en">Content Gap Detection</h3><h3 class="sr">Detekcija gapova u sadržaju</h3><p class="en">What are customers asking AI that your website doesn't answer? We identify missing topics and give you a content action plan.</p><p class="sr">Šta kupci pitaju AI što vaš sajt ne pokriva? Identifikujemo teme koje nedostaju i dajemo vam akcioni plan.</p></div>
     </div>
   </div>
 </section>
@@ -697,40 +329,13 @@ body.lang-sr .sr { display: revert; }
 <!-- How it works -->
 <section id="how">
   <div class="container">
-    <div class="section-eyebrow">
-      <span class="en">Process</span>
-      <span class="sr">Proces</span>
-    </div>
-    <h2 class="section-title">
-      <span class="en">How it works</span>
-      <span class="sr">Kako funkcioniše</span>
-    </h2>
-    <p class="section-sub">
-      <span class="en">Three automated steps, one clear report. No technical setup required on your side.</span>
-      <span class="sr">Tri automatizovana koraka, jedan jasan izveštaj. Nije potrebno tehničko podešavanje s vaše strane.</span>
-    </p>
+    <div class="section-eyebrow"><span class="en">Process</span><span class="sr">Proces</span></div>
+    <h2 class="section-title"><span class="en">How it works</span><span class="sr">Kako funkcioniše</span></h2>
+    <p class="section-sub"><span class="en">Three automated steps, one clear report. No technical setup required on your side.</span><span class="sr">Tri automatizovana koraka, jedan jasan izveštaj. Nije potrebno tehničko podešavanje s vaše strane.</span></p>
     <div class="steps">
-      <div class="step">
-        <div class="step-num">01</div>
-        <h3 class="en">We scrape your content</h3>
-        <h3 class="sr">Analiziramo vaš sadržaj</h3>
-        <p class="en">We extract and process the text from your website — product pages, FAQs, about pages — to understand what your business actually says about itself.</p>
-        <p class="sr">Izvlačimo i obrađujemo tekst sa vašeg sajta — stranice proizvoda, FAQ, o nama — da bismo razumeli šta vaš biznis zaista govori o sebi.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <h3 class="en">We simulate AI queries</h3>
-        <h3 class="sr">Simuliramo AI upite</h3>
-        <p class="en">We ask Claude 10–15 questions a real customer might ask — both with and without your content — and score how well AI handles each one.</p>
-        <p class="sr">Pitamo Claude 10–15 pitanja koja bi pravi kupac mogao postaviti — sa i bez vašeg sadržaja — i ocenjujemo koliko AI dobro odgovara na svako.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <h3 class="en">You get a clear report</h3>
-        <h3 class="sr">Dobijate jasan izveštaj</h3>
-        <p class="en">A visual HTML report with scores, per-question breakdowns, detected gaps, and prioritised content recommendations you can act on immediately.</p>
-        <p class="sr">Vizuelni HTML izveštaj sa skorovima, analizom po pitanjima, detektovanim gapovima i prioritizovanim preporukama za sadržaj koje možete odmah primeniti.</p>
-      </div>
+      <div class="step"><div class="step-num">01</div><h3 class="en">We scrape your content</h3><h3 class="sr">Analiziramo vaš sadržaj</h3><p class="en">We extract and process the text from your website — product pages, FAQs, about pages — to understand what your business actually says about itself.</p><p class="sr">Izvlačimo i obrađujemo tekst sa vašeg sajta — stranice proizvoda, FAQ, o nama — da bismo razumeli šta vaš biznis zaista govori o sebi.</p></div>
+      <div class="step"><div class="step-num">02</div><h3 class="en">We simulate AI queries</h3><h3 class="sr">Simuliramo AI upite</h3><p class="en">We ask Claude 10–15 questions a real customer might ask — both with and without your content — and score how well AI handles each one.</p><p class="sr">Pitamo Claude 10–15 pitanja koja bi pravi kupac mogao postaviti — sa i bez vašeg sadržaja — i ocenjujemo koliko AI dobro odgovara na svako.</p></div>
+      <div class="step"><div class="step-num">03</div><h3 class="en">You get a clear report</h3><h3 class="sr">Dobijate jasan izveštaj</h3><p class="en">A visual HTML report with scores, per-question breakdowns, detected gaps, and prioritised content recommendations you can act on immediately.</p><p class="sr">Vizuelni HTML izveštaj sa skorovima, analizom po pitanjima, detektovanim gapovima i prioritizovanim preporukama za sadržaj koje možete odmah primeniti.</p></div>
     </div>
   </div>
 </section>
@@ -739,20 +344,12 @@ body.lang-sr .sr { display: revert; }
 <section style="background: var(--surface); border-top: 1px solid var(--border);">
   <div class="container">
     <div style="text-align:center; margin-bottom: 1rem;">
-      <div class="section-eyebrow">
-        <span class="en">Pricing</span>
-        <span class="sr">Cene</span>
-      </div>
-      <h2 class="section-title">
-        <span class="en">Simple, transparent pricing</span>
-        <span class="sr">Jednostavne, transparentne cene</span>
-      </h2>
+      <div class="section-eyebrow"><span class="en">Pricing</span><span class="sr">Cene</span></div>
+      <h2 class="section-title"><span class="en">Simple, transparent pricing</span><span class="sr">Jednostavne, transparentne cene</span></h2>
     </div>
     <div class="pricing-grid">
-
       <div class="pricing-card">
-        <h3 class="en">Basic Audit</h3>
-        <h3 class="sr">Osnovni audit</h3>
+        <h3 class="en">Basic Audit</h3><h3 class="sr">Osnovni audit</h3>
         <div class="pricing-price">€199 <span class="en">one-time</span><span class="sr">jednokratno</span></div>
         <p class="pricing-desc en">A full AI visibility snapshot for your business. Delivered in 48 hours.</p>
         <p class="pricing-desc sr">Puna AI vidljivost vašeg biznisa. Isporučeno za 48 sati.</p>
@@ -762,19 +359,11 @@ body.lang-sr .sr { display: revert; }
           <li><span class="en">HTML report with recommendations</span><span class="sr">HTML izveštaj sa preporukama</span></li>
           <li><span class="en">1 follow-up consultation call</span><span class="sr">1 konsultacioni poziv</span></li>
         </ul>
-        <a href="mailto:e.kate.taratuta@gmail.com?subject=Basic Audit Request" class="pricing-btn secondary">
-          <span class="en">Request audit</span>
-          <span class="sr">Zatraži audit</span>
-        </a>
+        <a href="mailto:e.kate.taratuta@gmail.com?subject=Basic Audit Request" class="pricing-btn secondary"><span class="en">Request audit</span><span class="sr">Zatraži audit</span></a>
       </div>
-
       <div class="pricing-card featured">
-        <div class="pricing-badge">
-          <span class="en">RECOMMENDED</span>
-          <span class="sr">PREPORUČENO</span>
-        </div>
-        <h3 class="en">Premium Monitor</h3>
-        <h3 class="sr">Premium monitoring</h3>
+        <div class="pricing-badge"><span class="en">RECOMMENDED</span><span class="sr">PREPORUČENO</span></div>
+        <h3 class="en">Premium Monitor</h3><h3 class="sr">Premium monitoring</h3>
         <div class="pricing-price">€79 <span class="en">/month</span><span class="sr">/mesec</span></div>
         <p class="pricing-desc en">Ongoing monitoring as AI systems and your content evolve. Cancel anytime.</p>
         <p class="pricing-desc sr">Kontinuirani monitoring kako AI sistemi i vaš sadržaj evoluiraju. Otkažite kada god hoćete.</p>
@@ -785,81 +374,51 @@ body.lang-sr .sr { display: revert; }
           <li><span class="en">Score alerts when visibility drops</span><span class="sr">Upozorenja kada vidljivost padne</span></li>
           <li><span class="en">Priority email support</span><span class="sr">Prioritetna email podrška</span></li>
         </ul>
-        <a href="mailto:e.kate.taratuta@gmail.com?subject=Premium Monitor Request" class="pricing-btn primary">
-          <span class="en">Get started</span>
-          <span class="sr">Počnite</span>
-        </a>
+        <a href="mailto:e.kate.taratuta@gmail.com?subject=Premium Monitor Request" class="pricing-btn primary"><span class="en">Get started</span><span class="sr">Počnite</span></a>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ── BUNDLE CROSS-SELL ──────────────────────────────────────── -->
+<!-- BUNDLE CROSS-SELL -->
 <section>
   <div class="container">
     <div class="bundle-section">
       <div class="bundle-kicker">🚀 Special Offer</div>
       <h3>The Complete AI Growth Suite</h3>
-      <p>Get both tools — find out how AI sees your business AND answer every customer instantly. One price, lifetime access.</p>
-      
+      <p>Get both tools — find out how AI sees your business AND answer every customer instantly. One setup fee, one monthly bill.</p>
       <div class="bundle-products">
         <div class="bundle-product-chip">🔍 AI Visibility Navigator</div>
         <div class="bundle-plus">+</div>
         <div class="bundle-product-chip">💬 AI FAQ Assistant</div>
       </div>
-      
-      <div class="bundle-price-big">
-        $199 <span class="bundle-old">$298</span>
-      </div>
-      <div class="bundle-save">Save $99 — Lifetime Access</div>
+      <div class="bundle-price-big">$299 <span class="bundle-old">$398</span> <span style="font-size:16px;font-weight:500;color:var(--ink-soft);">setup</span></div>
+      <div class="bundle-price-big" style="font-size:28px;margin-top:8px;">from $69 <span style="font-size:16px;font-weight:500;color:var(--ink-soft);">/month</span> <span class="bundle-old" style="font-size:16px;">from $128</span></div>
+      <div class="bundle-save">Save $99 on setup + from $59/month</div>
       <br>
-      <a href="mailto:e.kate.taratuta@gmail.com?subject=Bundle%20Deal%20%E2%80%94%20AI%20Growth%20Suite%20%24199" class="btn-bundle">Get Both Tools →</a>
-      <p style="margin-top: 16px; font-size: 13px; color: var(--ink-soft);">Bring your own API key — you only pay for what you use (~$0.01/query)</p>
+      <a href="mailto:e.kate.taratuta@gmail.com?subject=Bundle%20Deal%20%E2%80%94%20AI%20Growth%20Suite" class="btn-bundle">Get Both Tools →</a>
+      <p style="margin-top:16px; font-size:13px; color:var(--ink-soft);">Hosting, monitoring & support included. You bring your own API key. Final price quoted after a short discovery call.</p>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section">
-  <h2>
-    <span class="en">See your AI visibility score today</span>
-    <span class="sr">Pogledajte vaš AI visibility skor danas</span>
-  </h2>
-  <p>
-    <span class="en">We'll run a sample audit on one of your pages — free, no commitment.</span>
-    <span class="sr">Uradićemo uzorak audita na jednoj od vaših stranica — besplatno, bez obaveza.</span>
-  </p>
-  <a href="mailto:e.kate.taratuta@gmail.com?subject=Free Sample Audit" class="btn-primary">
-    <span class="en">Request free sample →</span>
-    <span class="sr">Zatraži besplatni uzorak →</span>
-  </a>
+  <h2><span class="en">See your AI visibility score today</span><span class="sr">Pogledajte vaš AI visibility skor danas</span></h2>
+  <p><span class="en">We'll run a sample audit on one of your pages — free, no commitment.</span><span class="sr">Uradićemo uzorak audita na jednoj od vaših stranica — besplatno, bez obaveza.</span></p>
+  <a href="mailto:e.kate.taratuta@gmail.com?subject=Free Sample Audit" class="btn-primary"><span class="en">Request free sample →</span><span class="sr">Zatraži besplatni uzorak →</span></a>
 </section>
 
-<!-- Footer -->
 <footer>
-  <p>
-    <strong>ETSystemsAI</strong> ·
-    <a href="mailto:e.kate.taratuta@gmail.com">e.kate.taratuta@gmail.com</a> ·
-    <span class="en">Sombor, Serbia</span>
-    <span class="sr">Sombor, Srbija</span>
-  </p>
-  <p style="margin-top:0.5rem; font-size:0.8rem;">
-    <span class="en">© 2026 ETSystemsAI. Built with Claude API.</span>
-    <span class="sr">© 2026 ETSystemsAI. Izrađeno uz Claude API.</span>
-  </p>
+  <p><strong>ETSystemsAI</strong> · <a href="mailto:e.kate.taratuta@gmail.com">e.kate.taratuta@gmail.com</a> · <span class="en">Sombor, Serbia</span><span class="sr">Sombor, Srbija</span></p>
+  <p style="margin-top:0.5rem; font-size:0.8rem;"><span class="en">© 2026 ETSystemsAI. Built with Claude API.</span><span class="sr">© 2026 ETSystemsAI. Izrađeno uz Claude API.</span></p>
 </footer>
 
 <script>
-// ── Language toggle ───────────────────────────────────────────
 function setLang(lang) {
   document.body.className = lang === 'sr' ? 'lang-sr' : '';
-  document.querySelectorAll('.lang-btn').forEach(b => {
-    b.classList.toggle('active', b.textContent.trim() === lang.toUpperCase());
-  });
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent.trim() === lang.toUpperCase()));
 }
-
-// ── Animated score counters ───────────────────────────────────
 const targets = { vis: 4.2, acc: 7.1, gap: 6 };
 const bars = [
   { q: "What accounting software for Serbia?", score: 8, cls: "high" },
@@ -868,41 +427,31 @@ const bars = [
   { q: "Cloud accounting tool Serbia?",          score: 6, cls: "mid"  },
   { q: "Features of Sinus software?",            score: 9, cls: "high" },
 ];
-
 function animateCount(el, target, decimals, duration) {
   const start = performance.now();
   function tick(now) {
     const t = Math.min((now - start) / duration, 1);
-    const val = (target * t).toFixed(decimals);
-    el.textContent = val;
+    el.textContent = (target * t).toFixed(decimals);
     if (t < 1) requestAnimationFrame(tick);
     else el.textContent = target.toFixed(decimals);
   }
   requestAnimationFrame(tick);
 }
-
 function buildBars() {
-  const container = document.getElementById('demo-bars');
-  container.innerHTML = bars.map(b => `
+  document.getElementById('demo-bars').innerHTML = bars.map(b => `
     <div class="demo-bar-row">
       <span class="q">${b.q}</span>
-      <div class="demo-bar-wrap">
-        <div class="demo-bar ${b.cls}" style="width:0%" data-w="${b.score * 10}%"></div>
-      </div>
+      <div class="demo-bar-wrap"><div class="demo-bar ${b.cls}" style="width:0%" data-w="${b.score * 10}%"></div></div>
       <span class="demo-score-lbl">${b.score}/10</span>
-    </div>
-  `).join('');
+    </div>`).join('');
 }
-
 window.addEventListener('load', () => {
   buildBars();
   setTimeout(() => {
     animateCount(document.getElementById('score-vis'), targets.vis, 1, 1400);
     animateCount(document.getElementById('score-acc'), targets.acc, 1, 1600);
     animateCount(document.getElementById('score-gap'), targets.gap, 0, 1000);
-    document.querySelectorAll('.demo-bar').forEach(b => {
-      b.style.width = b.dataset.w;
-    });
+    document.querySelectorAll('.demo-bar').forEach(b => b.style.width = b.dataset.w);
   }, 600);
 });
 </script>
