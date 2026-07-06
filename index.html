@@ -8,7 +8,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* ─── Tokens ─────────────────────────────────────────────────── */
 :root {
   --ink:      #0f172a;
   --ink-soft: #475569;
@@ -28,7 +27,6 @@
   --indigo-dark: #3730A3;
 }
 
-/* ─── Reset + Base ───────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -76,14 +74,6 @@ h1,h2,h3,h4 { font-family: 'Space Grotesk', sans-serif; line-height: 1.2; }
   font-size: 16px;
 }
 .bundle-banner a:hover { color: #C7D2FE; }
-.bundle-banner .bundle-price {
-  background: rgba(255,255,255,0.2);
-  padding: 6px 16px;
-  border-radius: 99px;
-  font-size: 15px;
-  font-weight: 700;
-  white-space: nowrap;
-}
 
 /* ─── Language Toggle ────────────────────────────────────────── */
 .lang-bar {
@@ -293,21 +283,64 @@ body.lang-sr .sr { display: revert; }
 <!-- Hero -->
 <section class="hero">
   <div class="container">
-    <div class="hero-badge"><span class="en">AI Search Optimization</span><span class="sr">AI optimizacija pretrage</span></div>
-    <h1><span class="en">How visible is your business<br>to <em>AI systems</em>?</span><span class="sr">Koliko je vaš biznis vidljiv<br>za <em>AI sisteme</em>?</span></h1>
-    <p><span class="en">When someone asks ChatGPT or Claude about your industry, does your business come up? We measure it — and tell you exactly what to fix.</span><span class="sr">Kada neko pita ChatGPT ili Claude o vašoj industriji, da li vaš biznis biva pomenut? Mi to merimo — i kažemo vam tačno šta da popravite.</span></p>
-    <div class="hero-actions">
-      <a href="mailto:e.kate.taratuta@gmail.com" class="btn-primary"><span class="en">Get your free sample report</span><span class="sr">Dobijte besplatni uzorak izveštaja</span></a>
-      <a href="#how" class="btn-secondary"><span class="en">See how it works</span><span class="sr">Pogledajte kako funkcioniše</span></a>
+    <div class="hero-badge">
+      <span class="en">AI Search Optimization</span>
+      <span class="sr">AI optimizacija pretrage</span>
     </div>
+    <h1>
+      <span class="en">How visible is your business<br>to <em>AI systems</em>?</span>
+      <span class="sr">Koliko je vaš biznis vidljiv<br>za <em>AI sisteme</em>?</span>
+    </h1>
+    <p>
+      <span class="en">When someone asks ChatGPT or Claude about your industry, does your business come up? We measure it — and tell you exactly what to fix.</span>
+      <span class="sr">Kada neko pita ChatGPT ili Claude o vašoj industriji, da li vaš biznis biva pomenut? Mi to merimo — i kažemo vam tačno šta da popravite.</span>
+    </p>
+    <div class="hero-actions">
+      <a href="mailto:e.kate.taratuta@gmail.com" class="btn-primary">
+        <span class="en">Get your free sample report</span>
+        <span class="sr">Dobijte besplatni uzorak izveštaja</span>
+      </a>
+      <a href="#how" class="btn-secondary">
+        <span class="en">See how it works</span>
+        <span class="sr">Pogledajte kako funkcioniše</span>
+      </a>
+    </div>
+
+    <!-- Demo panel -->
     <div class="demo-panel">
-      <div class="demo-top"><div class="demo-dot" style="background:#ef4444"></div><div class="demo-dot" style="background:#f59e0b"></div><div class="demo-dot" style="background:#10b981"></div><div class="demo-url">AI Visibility Navigator · running audit...</div></div>
+      <div class="demo-top">
+        <div class="demo-dot" style="background:#ef4444"></div>
+        <div class="demo-dot" style="background:#f59e0b"></div>
+        <div class="demo-dot" style="background:#10b981"></div>
+        <div class="demo-url">AI Visibility Navigator · running audit...</div>
+      </div>
       <div class="demo-body">
-        <div class="demo-label"><span class="en">Audit results · 10 questions analysed</span><span class="sr">Rezultati audita · 10 analiziranih pitanja</span></div>
+        <div class="demo-label">
+          <span class="en">Audit results · 10 questions analysed</span>
+          <span class="sr">Rezultati audita · 10 analiziranih pitanja</span>
+        </div>
         <div class="demo-scores">
-          <div class="demo-score-card blue"><span class="num" id="score-vis">0</span><span class="lbl"><span class="en">Visibility</span><span class="sr">Vidljivost</span></span></div>
-          <div class="demo-score-card green"><span class="num" id="score-acc">0</span><span class="lbl"><span class="en">Accuracy</span><span class="sr">Tačnost</span></span></div>
-          <div class="demo-score-card amber"><span class="num" id="score-gap">0</span><span class="lbl"><span class="en">Gaps found</span><span class="sr">Pronađeni gapovi</span></span></div>
+          <div class="demo-score-card blue">
+            <span class="num" id="score-vis">0</span>
+            <span class="lbl">
+              <span class="en">Visibility</span>
+              <span class="sr">Vidljivost</span>
+            </span>
+          </div>
+          <div class="demo-score-card green">
+            <span class="num" id="score-acc">0</span>
+            <span class="lbl">
+              <span class="en">Accuracy</span>
+              <span class="sr">Tačnost</span>
+            </span>
+          </div>
+          <div class="demo-score-card amber">
+            <span class="num" id="score-gap">0</span>
+            <span class="lbl">
+              <span class="en">Gaps found</span>
+              <span class="sr">Pronađeni gapovi</span>
+            </span>
+          </div>
         </div>
         <div id="demo-bars"></div>
       </div>
@@ -319,9 +352,27 @@ body.lang-sr .sr { display: revert; }
 <section class="metrics">
   <div class="container">
     <div class="metrics-grid">
-      <div class="metric-card"><div class="metric-icon">👁</div><h3 class="en">AI Visibility Score</h3><h3 class="sr">Skor AI vidljivosti</h3><p class="en">Does your business appear when potential customers ask AI about your category? We test 10+ realistic queries to find out.</p><p class="sr">Da li se vaš biznis pojavljuje kada potencijalni klijenti pitaju AI o vašoj kategoriji? Testiramo 10+ realnih upita.</p></div>
-      <div class="metric-card"><div class="metric-icon">✅</div><h3 class="en">Answer Accuracy</h3><h3 class="sr">Tačnost odgovora</h3><p class="en">When AI uses your content to answer questions, does it get the facts right? We measure hallucinations and information gaps.</p><p class="sr">Kada AI koristi vaš sadržaj za odgovore, da li su činjenice tačne? Merimo halucinacije i nedostatak informacija.</p></div>
-      <div class="metric-card"><div class="metric-icon">🔍</div><h3 class="en">Content Gap Detection</h3><h3 class="sr">Detekcija gapova u sadržaju</h3><p class="en">What are customers asking AI that your website doesn't answer? We identify missing topics and give you a content action plan.</p><p class="sr">Šta kupci pitaju AI što vaš sajt ne pokriva? Identifikujemo teme koje nedostaju i dajemo vam akcioni plan.</p></div>
+      <div class="metric-card">
+        <div class="metric-icon">👁</div>
+        <h3 class="en">AI Visibility Score</h3>
+        <h3 class="sr">Skor AI vidljivosti</h3>
+        <p class="en">Does your business appear when potential customers ask AI about your category? We test 10+ realistic queries to find out.</p>
+        <p class="sr">Da li se vaš biznis pojavljuje kada potencijalni klijenti pitaju AI o vašoj kategoriji? Testiramo 10+ realnih upita.</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">✅</div>
+        <h3 class="en">Answer Accuracy</h3>
+        <h3 class="sr">Tačnost odgovora</h3>
+        <p class="en">When AI uses your content to answer questions, does it get the facts right? We measure hallucinations and information gaps.</p>
+        <p class="sr">Kada AI koristi vaš sadržaj za odgovore, da li su činjenice tačne? Merimo halucinacije i nedostatak informacija.</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🔍</div>
+        <h3 class="en">Content Gap Detection</h3>
+        <h3 class="sr">Detekcija gapova u sadržaju</h3>
+        <p class="en">What are customers asking AI that your website doesn't answer? We identify missing topics and give you a content action plan.</p>
+        <p class="sr">Šta kupci pitaju AI što vaš sajt ne pokriva? Identifikujemo teme koje nedostaju i dajemo vam akcioni plan.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -329,13 +380,40 @@ body.lang-sr .sr { display: revert; }
 <!-- How it works -->
 <section id="how">
   <div class="container">
-    <div class="section-eyebrow"><span class="en">Process</span><span class="sr">Proces</span></div>
-    <h2 class="section-title"><span class="en">How it works</span><span class="sr">Kako funkcioniše</span></h2>
-    <p class="section-sub"><span class="en">Three automated steps, one clear report. No technical setup required on your side.</span><span class="sr">Tri automatizovana koraka, jedan jasan izveštaj. Nije potrebno tehničko podešavanje s vaše strane.</span></p>
+    <div class="section-eyebrow">
+      <span class="en">Process</span>
+      <span class="sr">Proces</span>
+    </div>
+    <h2 class="section-title">
+      <span class="en">How it works</span>
+      <span class="sr">Kako funkcioniše</span>
+    </h2>
+    <p class="section-sub">
+      <span class="en">Three automated steps, one clear report. No technical setup required on your side.</span>
+      <span class="sr">Tri automatizovana koraka, jedan jasan izveštaj. Nije potrebno tehničko podešavanje s vaše strane.</span>
+    </p>
     <div class="steps">
-      <div class="step"><div class="step-num">01</div><h3 class="en">We scrape your content</h3><h3 class="sr">Analiziramo vaš sadržaj</h3><p class="en">We extract and process the text from your website — product pages, FAQs, about pages — to understand what your business actually says about itself.</p><p class="sr">Izvlačimo i obrađujemo tekst sa vašeg sajta — stranice proizvoda, FAQ, o nama — da bismo razumeli šta vaš biznis zaista govori o sebi.</p></div>
-      <div class="step"><div class="step-num">02</div><h3 class="en">We simulate AI queries</h3><h3 class="sr">Simuliramo AI upite</h3><p class="en">We ask Claude 10–15 questions a real customer might ask — both with and without your content — and score how well AI handles each one.</p><p class="sr">Pitamo Claude 10–15 pitanja koja bi pravi kupac mogao postaviti — sa i bez vašeg sadržaja — i ocenjujemo koliko AI dobro odgovara na svako.</p></div>
-      <div class="step"><div class="step-num">03</div><h3 class="en">You get a clear report</h3><h3 class="sr">Dobijate jasan izveštaj</h3><p class="en">A visual HTML report with scores, per-question breakdowns, detected gaps, and prioritised content recommendations you can act on immediately.</p><p class="sr">Vizuelni HTML izveštaj sa skorovima, analizom po pitanjima, detektovanim gapovima i prioritizovanim preporukama za sadržaj koje možete odmah primeniti.</p></div>
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3 class="en">We scrape your content</h3>
+        <h3 class="sr">Analiziramo vaš sadržaj</h3>
+        <p class="en">We extract and process the text from your website — product pages, FAQs, about pages — to understand what your business actually says about itself.</p>
+        <p class="sr">Izvlačimo i obrađujemo tekst sa vašeg sajta — stranice proizvoda, FAQ, o nama — da bismo razumeli šta vaš biznis zaista govori o sebi.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3 class="en">We simulate AI queries</h3>
+        <h3 class="sr">Simuliramo AI upite</h3>
+        <p class="en">We ask Claude 10–15 questions a real customer might ask — both with and without your content — and score how well AI handles each one.</p>
+        <p class="sr">Pitamo Claude 10–15 pitanja koja bi pravi kupac mogao postaviti — sa i bez vašeg sadržaja — i ocenjujemo koliko AI dobro odgovara na svako.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3 class="en">You get a clear report</h3>
+        <h3 class="sr">Dobijate jasan izveštaj</h3>
+        <p class="en">A visual HTML report with scores, per-question breakdowns, detected gaps, and prioritised content recommendations you can act on immediately.</p>
+        <p class="sr">Vizuelni HTML izveštaj sa skorovima, analizom po pitanjima, detektovanim gapovima i prioritizovanim preporukama za sadržaj koje možete odmah primeniti.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -344,12 +422,19 @@ body.lang-sr .sr { display: revert; }
 <section style="background: var(--surface); border-top: 1px solid var(--border);">
   <div class="container">
     <div style="text-align:center; margin-bottom: 1rem;">
-      <div class="section-eyebrow"><span class="en">Pricing</span><span class="sr">Cene</span></div>
-      <h2 class="section-title"><span class="en">Simple, transparent pricing</span><span class="sr">Jednostavne, transparentne cene</span></h2>
+      <div class="section-eyebrow">
+        <span class="en">Pricing</span>
+        <span class="sr">Cene</span>
+      </div>
+      <h2 class="section-title">
+        <span class="en">Simple, transparent pricing</span>
+        <span class="sr">Jednostavne, transparentne cene</span>
+      </h2>
     </div>
     <div class="pricing-grid">
       <div class="pricing-card">
-        <h3 class="en">Basic Audit</h3><h3 class="sr">Osnovni audit</h3>
+        <h3 class="en">Basic Audit</h3>
+        <h3 class="sr">Osnovni audit</h3>
         <div class="pricing-price">€199 <span class="en">one-time</span><span class="sr">jednokratno</span></div>
         <p class="pricing-desc en">A full AI visibility snapshot for your business. Delivered in 48 hours.</p>
         <p class="pricing-desc sr">Puna AI vidljivost vašeg biznisa. Isporučeno za 48 sati.</p>
@@ -359,11 +444,18 @@ body.lang-sr .sr { display: revert; }
           <li><span class="en">HTML report with recommendations</span><span class="sr">HTML izveštaj sa preporukama</span></li>
           <li><span class="en">1 follow-up consultation call</span><span class="sr">1 konsultacioni poziv</span></li>
         </ul>
-        <a href="mailto:e.kate.taratuta@gmail.com?subject=Basic Audit Request" class="pricing-btn secondary"><span class="en">Request audit</span><span class="sr">Zatraži audit</span></a>
+        <a href="mailto:e.kate.taratuta@gmail.com?subject=Basic Audit Request" class="pricing-btn secondary">
+          <span class="en">Request audit</span>
+          <span class="sr">Zatraži audit</span>
+        </a>
       </div>
       <div class="pricing-card featured">
-        <div class="pricing-badge"><span class="en">RECOMMENDED</span><span class="sr">PREPORUČENO</span></div>
-        <h3 class="en">Premium Monitor</h3><h3 class="sr">Premium monitoring</h3>
+        <div class="pricing-badge">
+          <span class="en">RECOMMENDED</span>
+          <span class="sr">PREPORUČENO</span>
+        </div>
+        <h3 class="en">Premium Monitor</h3>
+        <h3 class="sr">Premium monitoring</h3>
         <div class="pricing-price">€79 <span class="en">/month</span><span class="sr">/mesec</span></div>
         <p class="pricing-desc en">Ongoing monitoring as AI systems and your content evolve. Cancel anytime.</p>
         <p class="pricing-desc sr">Kontinuirani monitoring kako AI sistemi i vaš sadržaj evoluiraju. Otkažite kada god hoćete.</p>
@@ -374,7 +466,10 @@ body.lang-sr .sr { display: revert; }
           <li><span class="en">Score alerts when visibility drops</span><span class="sr">Upozorenja kada vidljivost padne</span></li>
           <li><span class="en">Priority email support</span><span class="sr">Prioritetna email podrška</span></li>
         </ul>
-        <a href="mailto:e.kate.taratuta@gmail.com?subject=Premium Monitor Request" class="pricing-btn primary"><span class="en">Get started</span><span class="sr">Počnite</span></a>
+        <a href="mailto:e.kate.taratuta@gmail.com?subject=Premium Monitor Request" class="pricing-btn primary">
+          <span class="en">Get started</span>
+          <span class="sr">Počnite</span>
+        </a>
       </div>
     </div>
   </div>
@@ -392,8 +487,12 @@ body.lang-sr .sr { display: revert; }
         <div class="bundle-plus">+</div>
         <div class="bundle-product-chip">💬 AI FAQ Assistant</div>
       </div>
-      <div class="bundle-price-big">$299 <span class="bundle-old">$398</span> <span style="font-size:16px;font-weight:500;color:var(--ink-soft);">setup</span></div>
-      <div class="bundle-price-big" style="font-size:28px;margin-top:8px;">from $69 <span style="font-size:16px;font-weight:500;color:var(--ink-soft);">/month</span> <span class="bundle-old" style="font-size:16px;">from $128</span></div>
+      <div class="bundle-price-big">
+        $299 <span class="bundle-old">$398</span> <span style="font-size:16px;font-weight:500;color:var(--ink-soft);">setup</span>
+      </div>
+      <div class="bundle-price-big" style="font-size:28px;margin-top:8px;">
+        from $69 <span style="font-size:16px;font-weight:500;color:var(--ink-soft);">/month</span> <span class="bundle-old" style="font-size:16px;">from $128</span>
+      </div>
       <div class="bundle-save">Save $99 on setup + from $59/month</div>
       <br>
       <a href="mailto:e.kate.taratuta@gmail.com?subject=Bundle%20Deal%20%E2%80%94%20AI%20Growth%20Suite" class="btn-bundle">Get Both Tools →</a>
@@ -404,54 +503,82 @@ body.lang-sr .sr { display: revert; }
 
 <!-- CTA -->
 <section class="cta-section">
-  <h2><span class="en">See your AI visibility score today</span><span class="sr">Pogledajte vaš AI visibility skor danas</span></h2>
-  <p><span class="en">We'll run a sample audit on one of your pages — free, no commitment.</span><span class="sr">Uradićemo uzorak audita na jednoj od vaših stranica — besplatno, bez obaveza.</span></p>
-  <a href="mailto:e.kate.taratuta@gmail.com?subject=Free Sample Audit" class="btn-primary"><span class="en">Request free sample →</span><span class="sr">Zatraži besplatni uzorak →</span></a>
+  <h2>
+    <span class="en">See your AI visibility score today</span>
+    <span class="sr">Pogledajte vaš AI visibility skor danas</span>
+  </h2>
+  <p>
+    <span class="en">We'll run a sample audit on one of your pages — free, no commitment.</span>
+    <span class="sr">Uradićemo uzorak audita na jednoj od vaših stranica — besplatno, bez obaveza.</span>
+  </p>
+  <a href="mailto:e.kate.taratuta@gmail.com?subject=Free Sample Audit" class="btn-primary">
+    <span class="en">Request free sample →</span>
+    <span class="sr">Zatraži besplatni uzorak →</span>
+  </a>
 </section>
 
+<!-- Footer -->
 <footer>
-  <p><strong>ETSystemsAI</strong> · <a href="mailto:e.kate.taratuta@gmail.com">e.kate.taratuta@gmail.com</a> · <span class="en">Sombor, Serbia</span><span class="sr">Sombor, Srbija</span></p>
-  <p style="margin-top:0.5rem; font-size:0.8rem;"><span class="en">© 2026 ETSystemsAI. Built with Claude API.</span><span class="sr">© 2026 ETSystemsAI. Izrađeno uz Claude API.</span></p>
+  <p>
+    <strong>ETSystemsAI</strong> ·
+    <a href="mailto:e.kate.taratuta@gmail.com">e.kate.taratuta@gmail.com</a> ·
+    <span class="en">Sombor, Serbia</span>
+    <span class="sr">Sombor, Srbija</span>
+  </p>
+  <p style="margin-top:0.5rem; font-size:0.8rem;">
+    <span class="en">© 2026 ETSystemsAI. Built with Claude API.</span>
+    <span class="sr">© 2026 ETSystemsAI. Izrađeno uz Claude API.</span>
+  </p>
 </footer>
 
 <script>
 function setLang(lang) {
   document.body.className = lang === 'sr' ? 'lang-sr' : '';
-  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent.trim() === lang.toUpperCase()));
+  document.querySelectorAll('.lang-btn').forEach(function(b) {
+    b.classList.toggle('active', b.textContent.trim() === lang.toUpperCase());
+  });
 }
-const targets = { vis: 4.2, acc: 7.1, gap: 6 };
-const bars = [
+
+var targets = { vis: 4.2, acc: 7.1, gap: 6 };
+var bars = [
   { q: "What accounting software for Serbia?", score: 8, cls: "high" },
   { q: "Best invoicing app for entrepreneurs?",  score: 5, cls: "mid"  },
   { q: "Software for VAT reporting Serbia?",     score: 3, cls: "low"  },
   { q: "Cloud accounting tool Serbia?",          score: 6, cls: "mid"  },
-  { q: "Features of Sinus software?",            score: 9, cls: "high" },
+  { q: "Features of Sinus software?",            score: 9, cls: "high" }
 ];
+
 function animateCount(el, target, decimals, duration) {
-  const start = performance.now();
+  var start = performance.now();
   function tick(now) {
-    const t = Math.min((now - start) / duration, 1);
+    var t = Math.min((now - start) / duration, 1);
     el.textContent = (target * t).toFixed(decimals);
     if (t < 1) requestAnimationFrame(tick);
     else el.textContent = target.toFixed(decimals);
   }
   requestAnimationFrame(tick);
 }
+
 function buildBars() {
-  document.getElementById('demo-bars').innerHTML = bars.map(b => `
-    <div class="demo-bar-row">
-      <span class="q">${b.q}</span>
-      <div class="demo-bar-wrap"><div class="demo-bar ${b.cls}" style="width:0%" data-w="${b.score * 10}%"></div></div>
-      <span class="demo-score-lbl">${b.score}/10</span>
-    </div>`).join('');
+  var container = document.getElementById('demo-bars');
+  container.innerHTML = bars.map(function(b) {
+    return '<div class="demo-bar-row">' +
+      '<span class="q">' + b.q + '</span>' +
+      '<div class="demo-bar-wrap"><div class="demo-bar ' + b.cls + '" style="width:0%" data-w="' + (b.score * 10) + '%"></div></div>' +
+      '<span class="demo-score-lbl">' + b.score + '/10</span>' +
+    '</div>';
+  }).join('');
 }
-window.addEventListener('load', () => {
+
+window.addEventListener('load', function() {
   buildBars();
-  setTimeout(() => {
+  setTimeout(function() {
     animateCount(document.getElementById('score-vis'), targets.vis, 1, 1400);
     animateCount(document.getElementById('score-acc'), targets.acc, 1, 1600);
     animateCount(document.getElementById('score-gap'), targets.gap, 0, 1000);
-    document.querySelectorAll('.demo-bar').forEach(b => b.style.width = b.dataset.w);
+    document.querySelectorAll('.demo-bar').forEach(function(b) {
+      b.style.width = b.dataset.w;
+    });
   }, 600);
 });
 </script>
