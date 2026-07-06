@@ -541,13 +541,21 @@ body.lang-sr .sr { display: revert; }
 </footer>
 
 <script>
+// Language toggle
 function setLang(lang) {
   document.body.className = lang === 'sr' ? 'lang-sr' : '';
-  document.querySelectorAll('.lang-btn').forEach(function(b) {
-    b.classList.toggle('active', b.textContent.trim() === lang.toUpperCase());
-  });
+  var buttons = document.querySelectorAll('.lang-btn');
+  for (var i = 0; i < buttons.length; i++) {
+    var b = buttons[i];
+    if (b.textContent.trim() === lang.toUpperCase()) {
+      b.classList.add('active');
+    } else {
+      b.classList.remove('active');
+    }
+  }
 }
 
+// Demo animation data
 var targets = { vis: 4.2, acc: 7.1, gap: 6 };
 var bars = [
   { q: "What accounting software for Serbia?", score: 8, cls: "high" },
@@ -562,34 +570,57 @@ function animateCount(el, target, decimals, duration) {
   function tick(now) {
     var t = Math.min((now - start) / duration, 1);
     el.textContent = (target * t).toFixed(decimals);
-    if (t < 1) requestAnimationFrame(tick);
-    else el.textContent = target.toFixed(decimals);
+    if (t < 1) {
+      requestAnimationFrame(tick);
+    } else {
+      el.textContent = target.toFixed(decimals);
+    }
   }
   requestAnimationFrame(tick);
 }
 
 function buildBars() {
   var container = document.getElementById('demo-bars');
-  container.innerHTML = bars.map(function(b) {
-    return '<div class="demo-bar-row">' +
+  if (!container) { return; }
+  var html = '';
+  for (var i = 0; i < bars.length; i++) {
+    var b = bars[i];
+    html += '<div class="demo-bar-row">' +
       '<span class="q">' + b.q + '</span>' +
       '<div class="demo-bar-wrap"><div class="demo-bar ' + b.cls + '" style="width:0%" data-w="' + (b.score * 10) + '%"></div></div>' +
       '<span class="demo-score-lbl">' + b.score + '/10</span>' +
     '</div>';
-  }).join('');
+  }
+  container.innerHTML = html;
 }
 
-window.addEventListener('load', function() {
+function startAnimation() {
+  var visEl = document.getElementById('score-vis');
+  var accEl = document.getElementById('score-acc');
+  var gapEl = document.getElementById('score-gap');
+  
+  if (!visEl || !accEl || !gapEl) { return; }
+  
   buildBars();
+  
   setTimeout(function() {
-    animateCount(document.getElementById('score-vis'), targets.vis, 1, 1400);
-    animateCount(document.getElementById('score-acc'), targets.acc, 1, 1600);
-    animateCount(document.getElementById('score-gap'), targets.gap, 0, 1000);
-    document.querySelectorAll('.demo-bar').forEach(function(b) {
-      b.style.width = b.dataset.w;
-    });
+    animateCount(visEl, targets.vis, 1, 1400);
+    animateCount(accEl, targets.acc, 1, 1600);
+    animateCount(gapEl, targets.gap, 0, 1000);
+    
+    var allBars = document.querySelectorAll('.demo-bar');
+    for (var j = 0; j < allBars.length; j++) {
+      allBars[j].style.width = allBars[j].getAttribute('data-w');
+    }
   }, 600);
-});
+}
+
+// Run on DOM ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', startAnimation);
+} else {
+  startAnimation();
+}
 </script>
 </body>
 </html>
