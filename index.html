@@ -39,7 +39,7 @@ h1,h2,h3,h4 { font-family: 'Space Grotesk', sans-serif; line-height: 1.2; }
 
 .container { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; }
 
-/* ── BUNDLE BANNER ────────────────────────── */
+/* BUNDLE BANNER */
 .bundle-banner {
   background: linear-gradient(135deg, #4F46E5 0%, #3730A3 100%);
   color: white;
@@ -74,8 +74,16 @@ h1,h2,h3,h4 { font-family: 'Space Grotesk', sans-serif; line-height: 1.2; }
   font-size: 16px;
 }
 .bundle-banner a:hover { color: #C7D2FE; }
+.bundle-banner .bundle-price {
+  background: rgba(255,255,255,0.2);
+  padding: 6px 16px;
+  border-radius: 99px;
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+}
 
-/* ─── Language Toggle ────────────────────────────────────────── */
+/* Language Toggle */
 .lang-bar {
   background: var(--ink);
   padding: 0.5rem 1.5rem;
@@ -100,7 +108,7 @@ h1,h2,h3,h4 { font-family: 'Space Grotesk', sans-serif; line-height: 1.2; }
   color: #fff;
 }
 
-/* ─── Nav ────────────────────────────────────────────────────── */
+/* Nav */
 nav {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
@@ -136,7 +144,7 @@ nav {
 }
 .nav-cta:hover { opacity: 0.85; }
 
-/* ─── Hero ───────────────────────────────────────────────────── */
+/* Hero */
 .hero { padding: 5rem 0 4rem; text-align: center; }
 .hero-badge { display: inline-block; background: var(--blue-dim); color: var(--blue); font-size: 0.8rem; font-weight: 600; padding: 0.3rem 0.9rem; border-radius: 99px; margin-bottom: 1.5rem; letter-spacing: 0.04em; }
 .hero h1 { font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 700; max-width: 800px; margin: 0 auto 1.25rem; }
@@ -148,7 +156,7 @@ nav {
 .btn-secondary { background: var(--surface); color: var(--ink); padding: 0.85rem 2rem; border-radius: 10px; font-weight: 600; font-size: 1rem; text-decoration: none; border: 1px solid var(--border); transition: border-color 0.2s; display: inline-block; }
 .btn-secondary:hover { border-color: var(--blue); color: var(--blue); }
 
-/* ─── Demo Panel ─────────────────────────────────────────────── */
+/* Demo Panel */
 .demo-panel { max-width: 680px; margin: 3.5rem auto 0; background: var(--surface); border-radius: 16px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 20px 60px rgba(15,23,42,0.08); }
 .demo-top { background: var(--ink); padding: 0.75rem 1rem; display: flex; align-items: center; gap: 0.5rem; }
 .demo-dot { width: 10px; height: 10px; border-radius: 50%; }
@@ -174,13 +182,13 @@ nav {
 .demo-bar.low { background: var(--red); }
 .demo-score-lbl { width: 32px; text-align: right; font-weight: 600; font-size: 0.8rem; color: var(--ink); }
 
-/* ─── Sections ───────────────────────────────────────────────── */
+/* Sections */
 section { padding: 4.5rem 0; }
 .section-eyebrow { font-size: 0.78rem; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
 .section-title { font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 700; margin-bottom: 1rem; }
 .section-sub { color: var(--ink-soft); font-size: 1.05rem; max-width: 560px; }
 
-/* ─── Metrics ────────────────────────────────────────────────── */
+/* Metrics */
 .metrics { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; padding-top: 1rem; }
 .metric-card { padding: 1.75rem; border-radius: var(--radius); border: 1px solid var(--border); }
@@ -188,14 +196,14 @@ section { padding: 4.5rem 0; }
 .metric-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
 .metric-card p { font-size: 0.9rem; color: var(--ink-soft); }
 
-/* ─── Steps ──────────────────────────────────────────────────── */
+/* Steps */
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
 .step { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.75rem; }
 .step-num { font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; font-weight: 700; color: var(--blue-dim); line-height: 1; margin-bottom: 0.75rem; }
 .step h3 { font-size: 1rem; margin-bottom: 0.5rem; }
 .step p { font-size: 0.88rem; color: var(--ink-soft); }
 
-/* ─── Pricing ────────────────────────────────────────────────── */
+/* Pricing */
 .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 780px; margin: 2.5rem auto 0; }
 .pricing-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; }
 .pricing-card.featured { border-color: var(--blue); box-shadow: 0 0 0 1px var(--blue), 0 8px 30px rgba(37,99,235,0.12); }
@@ -213,7 +221,7 @@ section { padding: 4.5rem 0; }
 .pricing-btn.secondary { background: var(--bg); color: var(--blue); border: 1px solid var(--blue); }
 .pricing-btn:hover { opacity: 0.85; }
 
-/* ── Bundle cross-sell ────────────────────────── */
+/* Bundle cross-sell */
 .bundle-section {
   background: linear-gradient(135deg, #EEF2FF 0%, #E0F2FE 100%);
   border: 2px solid #DBEAFE; border-radius: 20px;
@@ -231,17 +239,17 @@ section { padding: 4.5rem 0; }
 .btn-bundle { background: var(--indigo); color: white; padding: 16px 36px; border-radius: 30px; font-weight: 700; font-size: 16px; text-decoration: none; display: inline-block; transition: background 0.15s, transform 0.15s; }
 .btn-bundle:hover { background: var(--indigo-dark); transform: translateY(-2px); }
 
-/* ─── CTA ────────────────────────────────────────────────────── */
+/* CTA */
 .cta-section { background: var(--ink); color: #fff; text-align: center; padding: 4rem 1.5rem; }
 .cta-section h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1rem; }
 .cta-section p { color: rgba(255,255,255,0.65); margin-bottom: 2rem; font-size: 1.05rem; }
 .cta-section .btn-primary { background: var(--blue); }
 
-/* ─── Footer ─────────────────────────────────────────────────── */
+/* Footer */
 footer { background: var(--surface); border-top: 1px solid var(--border); padding: 2rem 1.5rem; text-align: center; font-size: 0.85rem; color: var(--ink-soft); }
 footer a { color: var(--blue); text-decoration: none; }
 
-/* ─── Responsive ─────────────────────────────────────────────── */
+/* Responsive */
 @media (max-width: 700px) {
   .metrics-grid, .steps, .pricing-grid { grid-template-columns: 1fr; }
   .demo-scores { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
@@ -249,7 +257,7 @@ footer a { color: var(--blue); text-decoration: none; }
   .bundle-banner { font-size: 14px; padding: 16px 20px; gap: 10px; }
 }
 
-/* ─── Language display ───────────────────────────────────────── */
+/* Language display */
 .sr { display: none; }
 body.lang-sr .en { display: none; }
 body.lang-sr .sr { display: revert; }
@@ -257,10 +265,11 @@ body.lang-sr .sr { display: revert; }
 </head>
 <body>
 
-<!-- ── BUNDLE BANNER ─────────────────────────── -->
+<!-- BUNDLE BANNER -->
 <div class="bundle-banner">
   <span class="bundle-badge">🔥 Bundle Deal</span>
-  <span>Both tools — <strong>$299 setup + from $69/mo</strong></span>
+  <span><strong>AI Visibility Navigator + AI FAQ Assistant</strong> —</span>
+  <span class="bundle-price">$299 setup + from $69/mo</span>
   <a href="mailto:e.kate.taratuta@gmail.com?subject=Bundle%20Deal%20%E2%80%94%20AI%20Growth%20Suite">Grab the bundle →</a>
 </div>
 
