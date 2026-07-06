@@ -46,18 +46,16 @@ h1,h2,h3,h4 { font-family: 'Space Grotesk', sans-serif; line-height: 1.2; }
   background: linear-gradient(135deg, #4F46E5 0%, #3730A3 100%);
   color: white;
   text-align: center;
-  padding: 12px 24px;
+  padding: 10px 24px;
   font-size: 14px;
   font-weight: 600;
-  position: sticky;
-  top: 0;
-  z-index: 110;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.25);
+  position: relative;
+  z-index: 10;
 }
 .bundle-banner .bundle-badge {
   background: var(--amber);
@@ -68,6 +66,7 @@ h1,h2,h3,h4 { font-family: 'Space Grotesk', sans-serif; line-height: 1.2; }
   border-radius: 99px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 .bundle-banner a {
   color: white;
@@ -116,10 +115,9 @@ nav {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
   position: sticky;
-  top: 48px;
+  top: 0;
   z-index: 100;
 }
-@media (max-width: 640px) { nav { top: 56px; } }
 .nav-inner {
   display: flex;
   align-items: center;
@@ -563,6 +561,7 @@ footer a { color: var(--blue); text-decoration: none; }
   .metrics-grid, .steps, .pricing-grid { grid-template-columns: 1fr; }
   .demo-scores { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
   .demo-score-card .num { font-size: 1.5rem; }
+  .bundle-banner { font-size: 12px; padding: 8px 16px; gap: 6px; }
 }
 
 /* ─── Language display logic ─────────────────────────────────── */
@@ -576,7 +575,7 @@ body.lang-sr .sr { display: revert; }
 <!-- ── BUNDLE BANNER ─────────────────────────────────────────── -->
 <div class="bundle-banner">
   <span class="bundle-badge">🔥 Bundle Deal</span>
-  <span>Get <strong>AI Visibility Navigator + AI FAQ Assistant</strong> together —</span>
+  <span>Get <strong>AI Visibility Navigator + AI FAQ Assistant</strong> —</span>
   <span class="bundle-price">$199 lifetime</span>
   <a href="mailto:e.kate.taratuta@gmail.com?subject=Bundle%20Deal%20%E2%80%94%20AI%20Growth%20Suite">Grab the bundle →</a>
 </div>
